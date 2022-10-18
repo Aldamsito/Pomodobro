@@ -66,18 +66,20 @@
         fill: var(--white);
 
         aspect-ratio: 1/1;
-        background:none;
+        background: none;
         border: 2px solid rgba(white, 0.5);
         border-radius: 100%;
 
         transition: 0.3s all ease;
+
         &:hover,
         &:active {
             border-color: white;
         }
 
-        &:active{
+        &:active {
             background-color: var(--rusty-red);
+            transform: scale(1.2);
         }
     }
 
@@ -85,12 +87,6 @@
 
         .btn {
             width: 4rem;
-
-            svg {
-
-                width: 1rem;
-                height: 1rem;
-            }
         }
 
         :nth-child(2) {
@@ -127,6 +123,16 @@
             margin-bottom: 20px;
         }
 
+    }
+}
+
+@keyframes animate {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
     }
 }
 
