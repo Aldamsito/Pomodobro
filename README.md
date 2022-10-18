@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
 
+![image](https://user-images.githubusercontent.com/110794155/196462094-a4e96fd1-1b1a-463e-bb0a-825c3eb41932.png)
+
 ## Link
 
 https://aldamsito.github.io/Pomodobro
