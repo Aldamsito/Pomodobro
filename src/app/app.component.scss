@@ -1,0 +1,15 @@
+:host {
+    height: 100vh;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    app-header {
+        height: 100px;
+    }
+
+    app-pomodoro {
+        flex: 1;
+    }
+}

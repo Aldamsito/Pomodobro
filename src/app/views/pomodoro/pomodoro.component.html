@@ -1,0 +1,28 @@
+<div class="btns mode">
+    <button title="short-break" class="btn" (click)="setTimerType('break'); playButton()">
+        Short Break
+    </button>
+    <button title="work" class="btn" (click)="setTimerType('work'); playButton()">
+        Work
+    </button>
+    <button title="long-break" class="btn" (click)="setTimerType('longbreak'); playButton()">
+        Long Break
+    </button>
+</div>
+
+<div class="clock">
+    <span>{{timer.mins | displayTime}}:{{timer.secs | displayTime}}</span>
+</div>
+
+<div class="btns controls">
+    <button title="reset" class="btn" type="button" (click)="resetTimer(); playButton()">
+        <fa-icon [icon]="faStop" size="xl"></fa-icon>
+    </button>
+    <button title="play" class="btn" type="button" (click)="changeState(); playButton()">
+        <fa-icon *ngIf="timer.state === 'start'" [icon]="faPlay" size="xl"></fa-icon>
+        <fa-icon *ngIf="timer.state === 'stop'" [icon]="faPause" size="xl"></fa-icon>
+    </button>
+    <button title="info" class="btn" type="button" (click)="skipTimer(); playButton()">
+        <fa-icon [icon]="faForwardStep" size="xl"></fa-icon>
+    </button>
+</div>

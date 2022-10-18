@@ -1,0 +1,22 @@
+:host {
+    margin: 10px 25px;
+
+    display: flex;
+    align-items: center;
+
+    h1 {
+        font-size: .75rem;
+        font-weight: lighter;
+    }
+
+    a {
+        margin-left: auto;
+        color: white;
+        text-decoration: underline dotted;
+
+        &:hover,
+        &:after {
+            color: var(--rusty-red);
+        }
+    }
+}

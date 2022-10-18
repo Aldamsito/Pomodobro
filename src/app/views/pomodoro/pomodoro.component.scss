@@ -1,0 +1,133 @@
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .clock {
+        flex: 1;
+    }
+
+    .mode,
+    .controls {
+        flex: .5;
+    }
+}
+
+.clock {
+    position: relative;
+    aspect-ratio: 1/1;
+    margin: 5px auto;
+
+    border: 5px solid var(--white);
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 2px solid rgba(white, 0.5);
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    &::before {
+        width: 120%;
+        aspect-ratio: 1/1;
+    }
+
+    &::after {
+        width: 80%;
+        aspect-ratio: 1/1;
+    }
+
+    span {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+
+    .btn {
+        margin: 0 15px;
+        color: var(--white);
+        fill: var(--white);
+
+        aspect-ratio: 1/1;
+        background:none;
+        border: 2px solid rgba(white, 0.5);
+        border-radius: 100%;
+
+        transition: 0.3s all ease;
+        &:hover,
+        &:active {
+            border-color: white;
+        }
+
+        &:active{
+            background-color: var(--rusty-red);
+        }
+    }
+
+    &.controls {
+
+        .btn {
+            width: 4rem;
+
+            svg {
+
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        :nth-child(2) {
+            width: 6rem;
+            margin-top: 20px;
+        }
+    }
+
+    &.mode {
+        .btn {
+            position: relative;
+            width: 5rem;
+            font-size: 1.2rem;
+
+            &::after {
+                content: "";
+                width: 110%;
+                aspect-ratio: 1/1;
+
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                border: 2px solid rgba(white, 0.2);
+                border-radius: 100%;
+                transform: translate(-50%, -50%);
+
+            }
+
+        }
+
+        :nth-child(2) {
+            width: 6rem;
+            margin-bottom: 20px;
+        }
+
+    }
+}
+
+@media screen and (max-width:768px) {}
