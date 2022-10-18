@@ -4,8 +4,8 @@ import { State, Type, Timer } from '../../shared/models/timer.model'
 
 import { faStop, faPlay, faPause, faForwardStep } from '@fortawesome/free-solid-svg-icons';
 
-const timerAudioSrc: string = '/assets/sfx-timer.mp3';
-const btnAudioSrc: string = '/assets/sfx-button.mp3';
+const timerAudioSrc: string = 'assets/sfx-timer.mp3';
+const btnAudioSrc: string = 'assets/sfx-button.mp3';
 
 @Component({
   selector: 'app-pomodoro',
