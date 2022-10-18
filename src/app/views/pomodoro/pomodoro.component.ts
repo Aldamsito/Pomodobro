@@ -4,8 +4,8 @@ import { State, Type, Timer } from '../../shared/models/timer.model'
 
 import { faStop, faPlay, faPause, faForwardStep } from '@fortawesome/free-solid-svg-icons';
 
-const timerAudioSrc: string = '../../assets/sfx-timer.mp3';
-const btnAudioSrc: string = '../../assets/sfx-button.mp3';
+const timerAudioSrc: string = '/assets/sfx-timer.mp3';
+const btnAudioSrc: string = '/assets/sfx-button.mp3';
 
 @Component({
   selector: 'app-pomodoro',
@@ -69,6 +69,7 @@ export class PomodoroComponent implements OnInit {
     this.timerService.setType(type);
     this.backgroundByType();
   }
+
   backgroundByType(): void {
     switch (this.timer.type) {
       case 'work':
@@ -133,6 +134,7 @@ export class PomodoroComponent implements OnInit {
     this.setTimerOff();
     this.timerService.setState('start');
     this.timerService.setType('work');
+    this.backgroundByType();
     this.pomodoroCount = 1;
     this.timerService.setTimerValues(this.timerService.getTimeValues(this.timer.type), 0);
   }
